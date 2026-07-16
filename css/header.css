@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: rgb(87, 94, 87);
+}
+
+.logoImg {
+  width: 80px;
+  height: 80px;
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50px;
+  margin-left: 15px;
+}
+
+.header ul {
+  list-style-type: none;
+}
+
+.header li a {
+  font-size: xx-large;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header li a:hover {
+  color: rgb(191, 191, 191);
+}
+
+#header-text {
+  display: block;
+  margin-top: 18px;
+}
+
+.transactions {
+  margin-left: -50px;
+}

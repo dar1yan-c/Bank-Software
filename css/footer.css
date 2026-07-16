@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(87, 94, 87);
+  padding: 20px 0;
+  font-size: x-large;
+  color: white;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.footer ul a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+
+.footer ul a:hover {
+  color: rgb(191, 191, 191);
+}

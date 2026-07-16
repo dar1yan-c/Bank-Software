@@ -1,0 +1,24 @@
+body {
+  background-color: rgb(205, 205, 205);
+}
+
+.aboutUs {
+  margin: 25px 75px;
+}
+
+.ourMission {
+  margin: 25px 75px;
+}
+
+.mainContent-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  margin-bottom: 15px;
+}
+
+.mainContent-text {
+  font-size: larger;
+}
+

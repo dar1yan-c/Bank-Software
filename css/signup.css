@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(205, 205, 205);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  color: white;
+  margin: 0;
+  height: 85vh;
+  font-family: sans-serif;
+}
+
+.signupBox {
+  display: block;
+  border: 1px solid transparent;
+  padding: 7vh;
+  border-radius: 50px;
+  background-image: linear-gradient(330deg, rgb(2, 150, 10), rgb(21, 255, 0));
+}
+
+.title {
+  margin-bottom: 3vh;
+}
+
+.input-box {
+  position: relative;
+  width: 93%;
+  margin: 5vh 0;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid rgb(11, 128, 0);
+  outline: none;
+  color: rgb(0, 0, 0);
+}
+
+label {
+  position: absolute;
+  left: 13px;
+  top: 7px;
+  color: #94a3b8;
+  pointer-events: none;
+  transition: 0.3s;
+  background-color: transparent;
+  padding: 0 5px;
+}
+
+input:focus + label,
+input:valid + label {
+  top: -20px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: rgb(141, 141, 141);
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  font-size: xx-large;
+  margin-left: 21.4vh;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+  color: rgb(255, 255, 255);
+  padding-left: 8vh;
+  width: 250px;
+  height: 70px;
+}
+
+button:hover {
+  background: #828282;
+  padding-left: 8.2vh;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.loginHyperlink {
+  color: blue;
+}
+
+.loginHyperlink:hover {
+  text-decoration: none;
+}
+
+.loginHyperlink:active {
+  color: rgb(34, 34, 255);
+}
