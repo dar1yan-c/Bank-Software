@@ -10,3 +10,6 @@ desktop.ini
 
 # Ignore log files that your browser or live servers might create
 *.log
+
+#Ignore txt files
+*.txt
