@@ -76,18 +76,18 @@ button {
   display: flex;
   align-items: center;
   font-size: xx-large;
-  margin-left: 19vh;
-  margin-top: 5vh;
-  margin-bottom: 3vh;
+  margin-left: 19dvh;
+  margin-top: 5dvh;
+  margin-bottom: 3dvh;
   color: rgb(255, 255, 255);
-  padding-left: 8.5vh;
+  padding-left: 8.5dvh;
   width: 225px;
   height: 70px;
 }
 
 button:hover {
   background: #828282;
-  padding-left: 8.7vh;
+  padding-left: 8.7dvh;
 }
 
 button:active {
