@@ -24,8 +24,7 @@ withdraw.addEventListener("click", (e) => {
   if (
     moneyInput.value !== null &&
     moneyInput.value !== undefined &&
-    moneyInput.value > 0 &&
-    money >= Number(moneyInput.value)
+    moneyInput.value > 0
   ) {
     money -= Number(moneyInput.value);
     console.log(money);

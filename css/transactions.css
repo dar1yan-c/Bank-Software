@@ -1,3 +1,42 @@
 body {
   background-color: rgb(205, 205, 205);
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  color: black;
+  margin: 0;
+  height: 70dvh;
+  font-family: sans-serif;
+}
+
+.transactionsBox{
+  width: min(80dvh, 80%);
+  background-color: white;
+  border-radius: 25px;
+  border: 1px transparent;
+}
+
+.box {
+  display: block;
+  border: 1px solid transparent;
+  padding: 3dvh 7dvh;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.2dvh 0;
+}
+
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.2dvh 0;
+}

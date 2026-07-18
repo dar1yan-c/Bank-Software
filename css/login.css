@@ -14,14 +14,14 @@ body {
   font-size: xx-large;
   color: white;
   margin: 0;
-  height: 85vh;
+  height: 85dvh;
   font-family: sans-serif;
 }
 
 .loginBox {
   display: block;
   border: 1px solid transparent;
-  padding: 7vh;
+  padding: 7dvh;
   border-radius: 50px;
   background-image: linear-gradient(330deg, rgb(2, 150, 10), rgb(21, 255, 0));
 }
@@ -33,7 +33,7 @@ body {
 .input-box {
   position: relative;
   width: 93%;
-  margin: 5vh 0;
+  margin: 5dvh 0;
 }
 
 input {
