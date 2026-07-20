@@ -2,6 +2,10 @@ body {
   background-color: rgb(205, 205, 205);
 }
 
+.MainContent{
+  height: 75dvh;
+}
+
 .aboutUs {
   margin: 25px 75px;
 }

@@ -9,21 +9,31 @@ body {
   font-size: large;
   color: black;
   margin: 0;
-  height: 70dvh;
+  height: 80dvh;
   font-family: sans-serif;
 }
 
-.transactionsBox{
+.transactionsBox {
   width: min(80dvh, 80%);
-  background-color: white;
-  border-radius: 25px;
+  height: min(80dvh, 80%);
+  background-image: linear-gradient(330deg, rgb(2, 150, 10), rgb(21, 255, 0));
+  border-radius: 10px;
   border: 1px transparent;
+  overflow: auto;
 }
 
 .box {
   display: block;
   border: 1px solid transparent;
-  padding: 3dvh 7dvh;
+  margin: 30px 40px;
+  padding: 7px;
+  background-image: linear-gradient(
+    330deg,
+    rgb(241, 243, 241),
+    rgb(216, 215, 215)
+  );
+  border: 1px transparent;
+  border-radius: 25px;
 }
 
 h1 {
@@ -33,10 +43,51 @@ h1 {
   margin: 1.2dvh 0;
 }
 
-
 h2 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 1.2dvh 0;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 7dvh;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  border-radius: 100px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  font-size: xx-large;
+  padding: 45px 35px;
+  margin-bottom: 3dvh;
+  color: rgb(255, 255, 255);
+  width: 225px;
+  height: 70px;
+}
+
+button:hover {
+  background: #828282;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.clearButton {
+  padding-left: 5.2dvh;
+  margin-bottom: -2dvh;
+  background-color: rgb(255, 71, 25);
 }
