@@ -1,9 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: rgb(205, 205, 205);
 }
 
-.MainContent{
-  height: 75dvh;
+.MainContent {
+  height: 100dvh;
 }
 
 .aboutUs {
@@ -25,4 +30,3 @@ body {
 .mainContent-text {
   font-size: larger;
 }
-
