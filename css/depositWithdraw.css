@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: rgb(205, 205, 205);
 }
@@ -9,7 +14,7 @@ body {
   font-size: xx-large;
   color: white;
   margin: 0;
-  height: 85dvh;
+  height: 100dvh;
   font-family: sans-serif;
 }
 
@@ -102,20 +107,24 @@ button:active {
 }
 
 .depositButton {
-  padding-left: 6.5dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(79, 255, 25);
 }
 
 .withdrawButton {
-  padding-left: 5.2dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: -2dvh;
   background-color: rgb(255, 71, 25);
 }
 
 .depositButton:hover {
-  padding-left: 6.8dvh;
+  padding-left: 1dvh;
 }
 
 .withdrawButton:hover {
-  padding-left: 5.5dvh;
+  padding-left: 1dvh;
 }

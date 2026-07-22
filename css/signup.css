@@ -14,7 +14,7 @@ body {
   font-size: xx-large;
   color: white;
   margin: 0;
-  height: 85vh;
+  height: 100vh;
   font-family: sans-serif;
 }
 
@@ -69,25 +69,19 @@ button {
   cursor: pointer;
   font-weight: 700;
   transition: all 0.2s;
-  padding: 10px 20px;
   border-radius: 100px;
   background: rgb(141, 141, 141);
   border: 1px solid black;
-  display: flex;
-  align-items: center;
   font-size: xx-large;
-  margin-left: 21.4dvh;
-  margin-top: 5dvh;
   margin-bottom: 3dvh;
   color: rgb(255, 255, 255);
-  padding-left: 8dvh;
   width: 250px;
   height: 70px;
 }
 
 button:hover {
   background: #828282;
-  padding-left: 8.2dvh;
+  padding-left: 1dvh;
 }
 
 button:active {
@@ -104,4 +98,10 @@ button:active {
 
 .loginHyperlink:active {
   color: rgb(34, 34, 255);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

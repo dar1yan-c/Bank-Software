@@ -69,25 +69,21 @@ button {
   cursor: pointer;
   font-weight: 700;
   transition: all 0.2s;
-  padding: 10px 20px;
   border-radius: 100px;
   background: rgb(141, 141, 141);
   border: 1px solid black;
   display: flex;
   align-items: center;
   font-size: xx-large;
-  margin-left: 19dvh;
-  margin-top: 5dvh;
   margin-bottom: 3dvh;
   color: rgb(255, 255, 255);
-  padding-left: 8.5dvh;
   width: 225px;
   height: 70px;
 }
 
 button:hover {
   background: #828282;
-  padding-left: 8.7dvh;
+  padding-left: 1dvh;
 }
 
 button:active {
@@ -104,4 +100,10 @@ button:active {
 
 .signupHyperlink:active {
   color: rgb(34, 34, 255);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

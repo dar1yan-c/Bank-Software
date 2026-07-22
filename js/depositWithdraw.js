@@ -24,13 +24,14 @@ function depositFunc() {
     transactions.push(newTransaction);
     localStorage.setItem("transactionHistory", JSON.stringify(transactions));
   } else {
-    console.error("Invalid input amount or insufficient funds");
+    alert("Invalid input amount or insufficient funds");
   }
 }
 
 deposit.addEventListener("click", (e) => {
   depositFunc();
   balance.innerText = money + "$";
+  moneyInput.value = "";
 });
 
 function withdrawFunc() {
@@ -49,11 +50,12 @@ function withdrawFunc() {
     transactions.push(newTransaction);
     localStorage.setItem("transactionHistory", JSON.stringify(transactions));
   } else {
-    console.error("Invalid input amount or insufficient funds");
+    alert("Invalid input amount or insufficient funds");
   }
 }
 
 withdraw.addEventListener("click", (e) => {
   withdrawFunc();
   balance.innerText = money + "$";
+  moneyInput.value = "";
 });

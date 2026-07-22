@@ -9,7 +9,7 @@ body {
   font-size: large;
   color: black;
   margin: 0;
-  height: 80dvh;
+  height: 85dvh;
   font-family: sans-serif;
 }
 
@@ -50,7 +50,7 @@ h2 {
   margin: 1.2dvh 0;
 }
 
-a{
+a {
   color: white;
   text-decoration: none;
 }
@@ -87,7 +87,18 @@ button:active {
 }
 
 .clearButton {
-  padding-left: 5.2dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: -2dvh;
   background-color: rgb(255, 71, 25);
+}
+
+.whenEmpty {
+  height: 63vh;
+  font-size: xx-large;
+}
+
+.hide{
+  display: none;
 }

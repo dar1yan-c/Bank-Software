@@ -1,4 +1,19 @@
+const whenEmpty = document.querySelector(".whenEmpty");
+
 let transactions = JSON.parse(localStorage.getItem("transactionHistory")) || [];
+console.log(transactions);
+
+if (transactions.length > 0) {
+  localStorage.setItem("classApplied", "true");
+}
+
+if (localStorage.getItem("classApplied") === "true") {
+  whenEmpty.classList.add("hide");
+  console.log(whenEmpty.classList);
+} else if (localStorage.getItem("classApplied") === "false") {
+  whenEmpty.classList.remove("hide");
+  console.log(whenEmpty.classList);
+}
 
 const transactionBox = document.querySelector(".transactionsBox");
 const clearButton = document.querySelector(".clearButton");
@@ -16,5 +31,6 @@ transactions.forEach((transaction) => {
 });
 
 clearButton.addEventListener("click", (e) => {
-    localStorage.clear();
+  localStorage.clear();
+  localStorage.setItem("classApplied", "false");
 });
