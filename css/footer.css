@@ -15,18 +15,18 @@
   padding: 20px 0;
   font-size: x-large;
   color: white;
+
+  ul {
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: bolder;
+    }
+    a:hover {
+      color: rgb(191, 191, 191);
+    }
+  }
 }
 
-.footer ul {
-  list-style-type: none;
-}
-
-.footer ul a {
-  text-decoration: none;
-  color: white;
-  font-weight: bolder;
-}
-
-.footer ul a:hover {
-  color: rgb(191, 191, 191);
-}
