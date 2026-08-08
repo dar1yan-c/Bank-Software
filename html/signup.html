@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="/css/signup.css" />
-    <script src="/js/header.js"></script>
-    <link rel="stylesheet" href="/css/header.css" />
-    <script src="/js/footer.js"></script>
-    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
+    <script src="../js/header.js"></script>
+    <link rel="stylesheet" href="../css/header.css" />
+    <script src="../js/footer.js"></script>
+    <link rel="stylesheet" href="../css/footer.css" />
   </head>
   <body>
     <main-header></main-header>
@@ -16,28 +16,38 @@
     <div class="container">
       <div class="signupBox">
         <h1 class="title">Create an account</h1>
-        <div class="email-information input-box">
-          <input type="email" name="email" id="email" required />
-          <label for="email">Email</label>
-        </div>
-        <div class="password-information input-box">
-          <input type="password" name="password" id="password" required />
-          <label for="password">Password</label>
-        </div>
 
-        <div class="button">
-          <button>Sign up</button>
-        </div>
+        <!-- Wrapped in a form with an ID -->
+        <form id="signup-form">
+          <div class="name-information input-box">
+            <input type="text" name="name" id="name" required />
+            <label for="name">Name</label>
+          </div>
+          <div class="email-information input-box">
+            <input type="email" name="email" id="email" required />
+            <label for="email">Email</label>
+          </div>
+          <div class="password-information input-box">
+            <input type="password" name="password" id="password" required />
+            <label for="password">Password</label>
+          </div>
+
+          <div class="button">
+            <button type="submit">Sign up</button>
+          </div>
+        </form>
 
         <div class="signUp">
           <p>
             Already have a <strong><i>LeaFree</i></strong> account?
-            <a href="/html/login.html" class="loginHyperlink">Log In</a>
+            <a href="./login.html" class="loginHyperlink">Log In</a>
           </p>
         </div>
       </div>
     </div>
 
     <main-footer></main-footer>
+
+    <script src="../js/signup.js"></script>
   </body>
 </html>

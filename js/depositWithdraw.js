@@ -32,6 +32,10 @@ deposit.addEventListener("click", (e) => {
   depositFunc();
   balance.innerText = money + "$";
   moneyInput.value = "";
+
+  fetch("http://localhost:3000/users/:id/balance")
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 });
 
 function withdrawFunc() {
@@ -58,4 +62,14 @@ withdraw.addEventListener("click", (e) => {
   withdrawFunc();
   balance.innerText = money + "$";
   moneyInput.value = "";
+
+  fetch("http://localhost:3000/users/:id/balance", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({balance, moneyInput})
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 });
