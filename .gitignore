@@ -13,3 +13,6 @@ desktop.ini
 
 #Ignore txt files
 *.txt
+
+#Ignore all env files
+*.env
