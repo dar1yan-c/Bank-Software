@@ -24,9 +24,15 @@ app.get("/notes/:id", async (req, res) => {
 app.post("/notes", async (req, res) => {
   const { title, contents } = req.body;
   const note = await createNote(title, contents);
-  res.send(note);
+  res.status(201).send(note);
 });
 
-app.listen(3000, (req, res) => {
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something broke!");
+  next();
+});
+
+app.listen(3000, () => {
   console.log("The server is running");
 });
