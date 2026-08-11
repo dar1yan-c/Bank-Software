@@ -1,10 +1,14 @@
 import express from "express";
 
-import { getNotes, getNote, createNote } from "./database.js";
+import { getNote, getNotes, createNote } from "./database.js";
 
 const app = express();
 
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("<h1>Hello from your backend.</h1>");
+});
 
 app.get("/notes", async (req, res) => {
   const notes = await getNotes();
@@ -20,14 +24,9 @@ app.get("/notes/:id", async (req, res) => {
 app.post("/notes", async (req, res) => {
   const { title, contents } = req.body;
   const note = await createNote(title, contents);
-  res.status(201).send(note);
+  res.send(note);
 });
 
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send("Something broke!");
-});
-
-app.listen(3000, () => {
+app.listen(3000, (req, res) => {
   console.log("The server is running");
 });
