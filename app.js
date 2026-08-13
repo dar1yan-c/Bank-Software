@@ -1,30 +1,25 @@
 import express from "express";
 
-import { getNote, getNotes, createNote } from "./database.js";
+import { getUsers, getUser, createUser } from "./database.js";
 
 const app = express();
-
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("<h1>Hello from your backend.</h1>");
+app.get("/users", async (req, res) => {
+  const users = await getUsers();
+  res.send(users);
 });
 
-app.get("/notes", async (req, res) => {
-  const notes = await getNotes();
-  res.send(notes);
-});
-
-app.get("/notes/:id", async (req, res) => {
+app.get("/users/:id", async (req, res) => {
   const id = req.params.id;
-  const note = await getNote(id);
-  res.send(note);
+  const user = await getUser(id);
+  res.send(user);
 });
 
-app.post("/notes", async (req, res) => {
-  const { title, contents } = req.body;
-  const note = await createNote(title, contents);
-  res.status(201).send(note);
+app.post("/users", async (req, res) => {
+  const { name, email, password } = req.body;
+  const user = await createUser(name, email, password);
+  res.status(201).send(user);
 });
 
 app.use((err, req, res, next) => {

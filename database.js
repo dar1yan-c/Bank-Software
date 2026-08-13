@@ -1,10 +1,8 @@
-// importing
 import mysql from "mysql2";
 
 import dotenv from "dotenv";
 dotenv.config();
 
-// creating a pool
 const pool = mysql
   .createPool({
     host: process.env.MYSQL_HOST,
@@ -14,28 +12,26 @@ const pool = mysql
   })
   .promise();
 
-// using queries
-
-export async function getNotes() {
-  const [notes] = await pool.query("SELECT * FROM notes");
-  return notes;
+export async function getUsers() {
+  const [users] = await pool.query("SELECT * FROM users");
+  return users;
 }
 
-export async function getNote(id) {
-  const [note] = await pool.query(
-    `SELECT * FROM notes
+export async function getUser(id) {
+  const [user] = await pool.query(
+    `SELECT * FROM users
     WHERE id = ?`,
     [id],
   );
-  return note[0];
+  return user[0];
 }
 
-export async function createNote(title, contents) {
-  const [result] = await pool.query(
-    `INSERT INTO notes (title, contents)
-    VALUES (?, ?)`,
-    [title, contents],
+export async function createUser(name, email, password) {
+  const [user] = await pool.query(
+    `INSERT INTO users (name, email, password)
+    VALUES (?,?,?)`,
+    [name, email, password],
   );
-  const id = result.insertId;
-  return getNote(id);
+  const id = user.insertId;
+  return await getUser(id);
 }

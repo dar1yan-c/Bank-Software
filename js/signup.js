@@ -5,7 +5,6 @@ const button = document.querySelector("button");
 
 button.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("Handler fired!");
   fetch("http://localhost:3000/users", {
     method: "POST",
     headers: {
