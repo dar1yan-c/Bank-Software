@@ -35,3 +35,20 @@ export async function createUser(name, email, password) {
   const id = user.insertId;
   return await getUser(id);
 }
+
+
+export async function findUser(email, password) {
+  const [user] = await pool.query(`SELECT id FROM users
+    WHERE email = ? AND password = ?
+    LIMIT 1`, [email, password]);
+
+  // Check if matching user was found
+  if (!user.length) return null;
+
+  const id = user[0].id;
+  return await getUser(id);
+}
+
+// SELECT `id` FROM `users`
+// WHERE `username` = {username} OR  `email` = {email}
+// LIMIT 1

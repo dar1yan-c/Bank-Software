@@ -5,7 +5,7 @@ const button = document.querySelector("button");
 
 button.addEventListener("click", (e) => {
   e.preventDefault();
-  fetch("http://localhost:3000/users", {
+  fetch("http://localhost:3000/signup", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -20,10 +20,7 @@ button.addEventListener("click", (e) => {
     .then((data) => console.log("Success:", data))
     .catch((err) => console.error("Error:", err));
 
-  if (!response.ok) {
-    throw new Error;
-  }
-  else {
-
-  }
+  nameInput.value = "";
+  emailInput.value = "";
+  passwordInput.value = "";
 });

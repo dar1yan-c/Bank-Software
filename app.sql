@@ -2,10 +2,10 @@ CREATE DATABASE bank_software;
 USE bank_software;
 
 CREATE TABLE users (
-    id integer PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
+    id integer PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    name VARCHAR(255) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL UNIQUE,
     created TIMESTAMP NOT NULL DEFAULT NOW()
 );
 
