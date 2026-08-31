@@ -48,7 +48,3 @@ export async function findUser(email, password) {
   const id = user[0].id;
   return await getUser(id);
 }
-
-// SELECT `id` FROM `users`
-// WHERE `username` = {username} OR  `email` = {email}
-// LIMIT 1

@@ -2,6 +2,13 @@ const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const button = document.querySelector("button");
 
+passwordInput.addEventListener('keypress', (e) => {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        button.click();
+    }
+})
+
 button.addEventListener("click", (e) => {
     e.preventDefault();
     fetch("http://localhost:3000/login", {
@@ -15,8 +22,15 @@ button.addEventListener("click", (e) => {
         }),
     })
         .then((response) => response.json())
-        .then((data) => console.log("Success:", data))
-        .catch((err) => console.error("Error:", err));
+        .then((data) => {
+            console.log("Successful login!")
+            console.log(data)
+        })
+        .catch((err) => {
+            console.error("Error:", err);
+        });
+
+
 
     emailInput.value = "";
     passwordInput.value = "";

@@ -17,7 +17,10 @@ button.addEventListener("click", (e) => {
     }),
   })
     .then((response) => response.json())
-    .then((data) => console.log("Success:", data))
+    .then((data) => {
+      console.log("Successful signup!")
+      console.log(data)
+    })
     .catch((err) => console.error("Error:", err));
 
   nameInput.value = "";
