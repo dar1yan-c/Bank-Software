@@ -9,30 +9,29 @@ passwordInput.addEventListener('keypress', (e) => {
     }
 })
 
-button.addEventListener("click", (e) => {
+button.addEventListener("click", async (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            email: emailInput.value,
-            password: passwordInput.value,
-        }),
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log("Successful login!")
-            console.log(data)
-        })
-        .catch((err) => {
-            console.error("Error:", err);
+
+    try {
+        const response = await fetch('http://localhost:3000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: emailInput.value,
+                password: passwordInput.value
+            })
         });
-
-
-
-    emailInput.value = "";
-    passwordInput.value = "";
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status ${response.status}`)
+        }
+        const data = await response.json();
+        console.log("Successful login!");
+        console.log(data);
+    }
+    catch (err) {
+        console.error(err);
+    }
 });
 
