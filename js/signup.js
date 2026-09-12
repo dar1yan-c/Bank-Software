@@ -3,6 +3,13 @@ const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const button = document.querySelector("button");
 
+passwordInput.addEventListener('keypress', (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    button.click();
+  }
+})
+
 button.addEventListener("click", async (e) => {
   e.preventDefault();
 
@@ -15,7 +22,8 @@ button.addEventListener("click", async (e) => {
       body: JSON.stringify({
         name: nameInput.value,
         email: emailInput.value,
-        password: passwordInput.value
+        password: passwordInput.value,
+        role: "USER"
       })
     });
     if (!response.ok) {
@@ -24,6 +32,9 @@ button.addEventListener("click", async (e) => {
 
     const data = await response.json();
     console.log("Successful signup!")
+    // * * * Redirect the signed in user to the account page * * * 
+
+
     console.log(data);
   }
   catch (err) {

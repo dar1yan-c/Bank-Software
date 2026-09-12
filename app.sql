@@ -6,12 +6,13 @@ CREATE TABLE users (
     name VARCHAR(255) NOT NULL UNIQUE,
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL UNIQUE,
+    role VARCHAR(255) NOT NULL,
     created TIMESTAMP NOT NULL DEFAULT NOW()
 );
 
 INSERT INTO users(name, email, password)
 VALUES
-    ("Admin", "admin@example.com", "admin1234"),
-    ("Dariyan", "dariyan@example.com", "dariyan4321"),
-    ("Stoyan", "stoyan@example.com", "stoyan9876"),
-    ("Slavi", "slavi@example.com", "slavi0000");
+    ("Admin", "admin@example.com", "admin1234", "ADMIN"),
+    ("Dariyan", "dariyan@example.com", "dariyan4321", "USER"),
+    ("Stoyan", "stoyan@example.com", "stoyan9876", "USER"),
+    ("Slavi", "slavi@example.com", "slavi0000", "USER");

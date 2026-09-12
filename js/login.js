@@ -20,7 +20,7 @@ button.addEventListener("click", async (e) => {
             },
             body: JSON.stringify({
                 email: emailInput.value,
-                password: passwordInput.value
+                password: passwordInput.value,
             })
         });
         if (!response.ok) {
@@ -28,6 +28,10 @@ button.addEventListener("click", async (e) => {
         }
         const data = await response.json();
         console.log("Successful login!");
+        // * * * Redirect the logged in user to the account page * * * 
+        // * * * If user is admin => redirect user to admin page * * *
+
+
         console.log(data);
     }
     catch (err) {
